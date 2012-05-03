@@ -159,6 +159,7 @@ html {
 }
 #reveal ul { list-style: none; }
 #reveal ul li { padding-left:0.75em; text-indent: -0.75em; margin: 0.4em 0; }
+#reveal ul.noBullets li { padding-left: 0; text-indent: 0; }
 #reveal ul li:before { content: "\25B8 \0020"; }
 #reveal ul.noBullets li:before { content: ""; }
 #reveal ul ul { padding-left: 0.75em; color: rgb(88, 149, 27); font-size: 90%; }
@@ -172,6 +173,7 @@ html {
     font-size: 48px;
     font-family: 'Puritan';
     text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
     letter-spacing: -4px;
     width: 200px;
     height: 200px;
@@ -200,14 +202,16 @@ html {
 
 #reveal blockquote {
 	display: block;
-	position: relative;
 	width: 70%;
-	margin: 5px auto;
+	margin: 0 0;
 	padding: 5px;
+    text-align: center;
 
-	font-style: italic;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    font-family: Gentium, 'Times New Roman', serif;
+    font-size: 48px;
+    color: rgb(62, 116, 144);
+	/*background: rgba(255, 255, 255, 0.05);*/
+	/*box-shadow: 0px 0px 2px rgba(0,0,0,0.2);*/
 }
 	#reveal blockquote:before {
 		content: '“';
@@ -215,6 +219,28 @@ html {
 	#reveal blockquote:after {
 		content: '”';
 	}
+
+#reveal blockquote.objective {
+    position: absolute;
+    left: 23%;
+    bottom: 25%;
+    text-align: left;
+    width: 77%;
+}
+#reveal .keywords {
+    font-weight: 100;
+    color: rgb(167, 52, 0);
+    font-style: italic;
+    position: absolute;
+    top: 76%;
+    left: 23%;
+    width: 77%;
+    font-size: 25px;
+    text-align: justify;
+    padding: 5px;
+    text-justify: inter-word;
+    letter-spacing: 0px;
+}
 
 #reveal pre {
 	display: block;
@@ -253,7 +279,8 @@ html {
 	}
 
 #reveal a:not(.image) {
-	color: hsl(185, 85%, 50%);
+	/*color: hsl(185, 85%, 50%);*/
+    color: blue;
 	text-decoration: none;
 
 	-webkit-transition: all .2s ease;
@@ -264,11 +291,13 @@ html {
 }
 
 	#reveal a:not(.image):hover {
-		color: hsl(185, 85%, 70%);
-		background: hsla(185, 25%, 20%, 0.4);
+		/*color: hsl(185, 85%, 70%);*/
+		/*background: hsla(185, 25%, 20%, 0.4);*/
+        color: rgb(246, 79, 0);
 		text-shadow: none;
 		border: none;
 		border-radius: 2px;
+        text-decoration: underline;
 	}
 
 /*#reveal section img {
@@ -366,7 +395,8 @@ html {
 
 	#reveal .progress span {
 		display: block;
-		background: hsl(185, 85%, 50%);
+		/*background: hsl(185, 85%, 50%);*/
+        background: rgb(64, 62, 26);
 		height: 100%;
 		width: 0px;
 
@@ -380,6 +410,7 @@ html {
 /*********************************************
  * ROLLING LINKS
  *********************************************/
+/*
 
 #reveal .roll {
     display: inline-block;
@@ -441,7 +472,7 @@ html {
     padding: 0 2px;
 
     color: #fff;
-    background: hsl(185, 60%, 35%);
+    background: blue;
 
     -webkit-transform-origin: 50% 0%;
        -moz-transform-origin: 50% 0%;
@@ -454,6 +485,7 @@ html {
             transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
 }
 
+*/
 
 /*********************************************
  * SLIDES
